@@ -6,47 +6,47 @@ import org.junit.Test;
 public class GenericTest {
     @Test
     public void givenMaxNumberAtFirstPositionShouldReturnTheSameInteger() {
-        Integer maxNumber = MaxNumberFinder.findingMaxNumber(80, 29, 45);
-        Assert.assertEquals(Integer.valueOf(80), maxNumber);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder(80, 29, 45);
+        Assert.assertEquals(Integer.valueOf(80), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxNumberAtSecondPositionShouldReturnTheSameInteger() {
-        Integer maxNumber = MaxNumberFinder.findingMaxNumber(29, 80, 45);
-        Assert.assertEquals(Integer.valueOf(80), maxNumber);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder(29, 80, 45);
+        Assert.assertEquals(Integer.valueOf(80), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxNumberAtThirdPositionShouldReturnTheSameInteger() {
-        Integer maxNumber = MaxNumberFinder.findingMaxNumber(29, 45, 80);
-        Assert.assertEquals(Integer.valueOf(80), maxNumber);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder(29, 45, 80);
+        Assert.assertEquals(Integer.valueOf(80), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxNumberAtFirstPositionShouldReturnTheSameFloat() {
-        Float maxNumber = MaxNumberFinder.findingMaxNumber(53.2f, 45.6f, 2.9f);
-        Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder(53.2f, 45.6f, 2.9f);
+        Assert.assertEquals(Float.valueOf(53.2f), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxNumberAtSecondPositionShouldReturnTheSameFloat() {
-        Float maxNumber = MaxNumberFinder.findingMaxNumber(45.6f, 53.2f, 2.9f);
-        Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder( 45.6f, 53.2f, 2.9f);
+        Assert.assertEquals(Float.valueOf(53.2f), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxNumberAtThirdPositionShouldReturnTheSameFloat() {
-        Float maxNumber = MaxNumberFinder.findingMaxNumber(45.6f, 2.9f, 53.2f);
-        Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder( 45.6f, 2.9f, 53.2f);
+        Assert.assertEquals(Float.valueOf(53.2f), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxStringAtFirstPositionShouldReturnTheSameString() {
-        String maxString = MaxNumberFinder.findingMaxNumber("Peach","Apple","Banana");
-        Assert.assertEquals(String.valueOf("Peach"), maxString);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder("Peach","Apple","Banana");
+        Assert.assertEquals(String.valueOf("Peach"), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxStringAtSecondPositionShouldReturnTheSameString() {
-        String maxString = MaxNumberFinder.findingMaxNumber("Apple","Peach","Banana");
-        Assert.assertEquals(String.valueOf("Peach"), maxString);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder("Apple","Peach","Banana");
+        Assert.assertEquals(String.valueOf("Peach"), maxNumberFinder.testMaximum());
     }
     @Test
     public void givenMaxStringAtThirdPositionShouldReturnTheSameString() {
-        String maxString = MaxNumberFinder.findingMaxNumber("Apple","Banana","Peach");
-        Assert.assertEquals(String.valueOf("Peach"), maxString);
+        MaxNumberFinder maxNumberFinder = new MaxNumberFinder("Apple","Banana","Peach");
+        Assert.assertEquals(String.valueOf("Peach"), maxNumberFinder.testMaximum());
     }
 }
