@@ -19,4 +19,19 @@ public class GenericTest {
         Integer maxNumber = MaxNumberFinder.findingMaxNumber(29, 45, 80);
         Assert.assertEquals(Integer.valueOf(80), maxNumber);
     }
+    @Test
+    public void givenMaxNumberAtFirstPositionShouldReturnTheSameFloat() {
+        Float maxNumber = MaxNumberFinder.findingMaxNumber(53.2f, 45.6f, 2.9f);
+        Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
+    }
+    @Test
+    public void givenMaxNumberAtSecondPositionShouldReturnTheSameFloat() {
+        Float maxNumber = MaxNumberFinder.findingMaxNumber(45.6f, 53.2f, 2.9f);
+        Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
+    }
+    @Test
+    public void givenMaxNumberAtThirdPositionShouldReturnTheSameFloat() {
+        Float maxNumber = MaxNumberFinder.findingMaxNumber(45.6f, 2.9f, 53.2f);
+        Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
+    }
 }
