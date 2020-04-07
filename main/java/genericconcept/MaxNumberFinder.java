@@ -1,14 +1,27 @@
 package genericconcept;
 
-public class MaxNumberFinder {
+public class MaxNumberFinder<X extends Comparable> {
+    X a;
+    X b;
+    X c;
 
-    public static <X extends Comparable> X findingMaxNumber(X a1, X a2, X a3) {
-        X max = a1;
-        if (a2.compareTo(max) > 0) {
-            max = a2;
+    public MaxNumberFinder(X a, X b, X c)
+    {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+    public   <X> X testMaximum(){
+        return (X) testMaximum(a,b,c);
+    }
+
+    public static <X extends Comparable> X testMaximum(X x,X y,X z) {
+        X max = x;
+        if (y.compareTo(max) > 0) {
+            max = y;
         }
-        if (a3.compareTo(max) > 0) {
-            max = a3;
+        if (z.compareTo(max) > 0) {
+            max = z;
         }
         return max;
     }
