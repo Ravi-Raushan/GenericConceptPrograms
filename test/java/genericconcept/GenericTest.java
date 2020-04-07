@@ -34,4 +34,19 @@ public class GenericTest {
         Float maxNumber = MaxNumberFinder.findingMaxNumber(45.6f, 2.9f, 53.2f);
         Assert.assertEquals(Float.valueOf(53.2f), maxNumber);
     }
+    @Test
+    public void givenMaxStringAtFirstPositionShouldReturnTheSameString() {
+        String maxString = MaxNumberFinder.findingMaxNumber("Peach","Apple","Banana");
+        Assert.assertEquals(String.valueOf("Peach"), maxString);
+    }
+    @Test
+    public void givenMaxStringAtSecondPositionShouldReturnTheSameString() {
+        String maxString = MaxNumberFinder.findingMaxNumber("Apple","Peach","Banana");
+        Assert.assertEquals(String.valueOf("Peach"), maxString);
+    }
+    @Test
+    public void givenMaxStringAtThirdPositionShouldReturnTheSameString() {
+        String maxString = MaxNumberFinder.findingMaxNumber("Apple","Banana","Peach");
+        Assert.assertEquals(String.valueOf("Peach"), maxString);
+    }
 }
