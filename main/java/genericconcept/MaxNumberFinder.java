@@ -15,6 +15,10 @@ public class MaxNumberFinder<X extends Comparable> {
                 }
             }
         }
+        printMaxNumber(pram[pram.length - 1]);
         return pram[pram.length - 1];
+    }
+    public static <X> void printMaxNumber(X maxNumberToBePrinted) {
+        System.out.println("Maximum number among three number:" + maxNumberToBePrinted);
     }
 }
